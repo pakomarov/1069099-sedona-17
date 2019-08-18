@@ -1,0 +1,48 @@
+.page-header {
+  position: relative;
+
+  width: 320px;
+  padding-bottom: 56px;
+}
+
+.page-header__main-nav {
+  display: none;
+
+  &--open {
+    display: block;
+  }
+}
+
+.page-header__toggle {
+  position: absolute;
+  right: 20px;
+
+  width: 23px;
+  height: 22px;
+  padding: 0;
+
+  overflow: hidden;
+  text-indent: -1000px;
+
+  background-color: transparent;
+  border: none;
+
+  &--burger {
+    bottom: 17px;
+    background-image: url("../img/icon-menu.svg");
+  }
+
+  &--cross {
+    top: 17px;
+    background-image: url(../img/icon-cross.svg);
+  }
+
+  background-repeat: no-repeat;
+}
+
+.page-header__logo {
+  position: absolute;
+  z-index: 1;
+  left: 110px;
+  bottom: -28px;
+}
