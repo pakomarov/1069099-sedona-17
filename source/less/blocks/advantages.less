@@ -1,0 +1,128 @@
+.advantages__heading {
+  margin: 0;
+  padding: 10px 35px 45px;
+
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 26px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.advantages__item--short {
+  position: relative;
+
+  padding: 27px 40px 28px;
+
+  background-color: @color-background-advantages;
+
+  &:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 280px;
+    height: 1px;
+
+    background-color: rgba(213, 213, 213);
+
+    transform: translateX(-50%);
+  }
+}
+
+.advantages__item--verbose {
+  padding: 40px 30px 0px;
+
+  background-color: @color-background-contrast;
+}
+
+.advantages__item-title {
+  margin: 0;
+  margin-bottom: 8px;
+
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.advantages__item--short .advantages__item-title {
+  color: @color-text-dark-heading;
+}
+
+.advantages__item--verbose .advantages__item-title {
+  color: @color-text-light-heading;
+}
+
+.advantages__item-number {
+  margin: 0;
+  margin-bottom: 16px;
+
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+}
+
+.advantages__item--short .advantages__item-number {
+  color: @color-text-dark;
+}
+
+.advantages__item--verbose .advantages__item-number {
+  color: @color-text-light;
+}
+
+.advantages__item-description {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+}
+
+.advantages__item--short .advantages__item-description {
+  color: @color-text-dark;
+}
+
+.advantages__item--verbose .advantages__item-description {
+  margin-bottom: 40px;
+
+  color: @color-text-light;
+}
+
+.advantages__extras {
+  margin: 0;
+  padding: 15px 0 29px;
+
+  list-style: none;
+}
+
+.advantages__extra-item {
+  padding: 20px 40px 7px 70px;
+
+  text-align: left;
+}
+
+.advantages__extra-item-title {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+  color: @color-text-dark-heading;
+}
+
+.advantages__extra-item-description {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+  color: @color-text-dark;
+}
