@@ -27,6 +27,8 @@
 }
 
 .page-footer__academy-link {
+  position: relative;
+
   display: inline-block;
   width: 27px;
   height: 34px;
@@ -35,8 +37,26 @@
   overflow: hidden;
   text-indent: -10000px;
   vertical-align: middle;
+}
 
-  background-image: url("../img/logo-htmlacademy.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
+.page-footer__academy-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.page-footer__academy-link:hover .page-footer__academy-logo,
+.page-footer__academy-link:focus .page-footer__academy-logo {
+  path {
+    fill: @color-background-contrast;
+  }
+}
+
+.page-footer__academy-link:active .page-footer__academy-logo {
+  path {
+    fill: @color-text-dark-heading;
+    opacity: 0.3;
+  }
 }
