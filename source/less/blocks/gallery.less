@@ -71,10 +71,7 @@
 }
 
 .gallery__item-likes {
-  position: relative;
-
   margin: 0;
-  padding-left: 37px;
 
   font-size: 14px;
   font-weight: bold;
@@ -84,12 +81,11 @@
 }
 
 .gallery__item-like-icon {
-  position: absolute;
-  top: -1px;
-  left: 0;
-
   width: 22px;
   height: 20px;
+  margin-right: 11px;
+
+  vertical-align: top;
 
   fill: rgba(0, 0, 0, 0.3);
 }
@@ -129,7 +125,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px 15px;
+    padding: 0 20px 17px;
   }
 
   .gallery__item-wrapper {
@@ -143,6 +139,10 @@
   .gallery__item-likes {
     box-sizing: border-box;
     width: 65px;
+  }
+
+  .gallery__item-like-icon {
+    margin-right: 6px;
   }
 }
 
