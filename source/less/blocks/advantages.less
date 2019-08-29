@@ -9,10 +9,30 @@
 }
 
 .advantages__list {
+  position: relative;
+
   margin: 0;
   padding: 0;
+  padding-top: 37px;
 
   list-style: none;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    width: 320px;
+    height: 37px;
+
+    background-color: @color-contrast;
+    background-image: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(-50%);
+  }
 }
 
 .advantages__item--verbose {
@@ -20,9 +40,26 @@
 }
 
 .advantages__item--short {
+  position: relative;
+
   padding: 27px 35px 28px;
 
   background-color: @color-background;
+
+  &:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 280px;
+    height: 1px;
+
+    background-color: rgb(218, 218, 218);
+
+    transform: translateX(-50%);
+  }
 }
 
 .advantages__item-title {
@@ -124,50 +161,6 @@
   color: @color-text-dark;
 }
 
-@media (max-width: @tablet-width) {
-  .advantages__list {
-    position: relative;
-
-    padding-top: 37px;
-
-    &::before {
-      content: "";
-
-      position: absolute;
-      top: 0;
-      left: 50%;
-
-      width: 320px;
-      height: 37px;
-
-      background-color: @color-contrast;
-      background-image: url("../img/bg-triangle.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      transform: translateX(-50%);
-    }
-  }
-
-  .advantages__item--short {
-    position: relative;
-
-    &:not(:last-child)::after {
-      content: "";
-
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-
-      width: 280px;
-      height: 1px;
-
-      background-color: rgb(218, 218, 218);
-
-      transform: translateX(-50%);
-    }
-  }
-}
-
 @media (min-width: @tablet-width) {
   .advantages__heading {
     max-width: 490px;
@@ -175,8 +168,15 @@
   }
 
   .advantages__list {
+    position: static;
+
     display: flex;
     flex-wrap: wrap;
+    padding-top: 0;
+
+    &::before {
+      display: none;
+    }
   }
 
   .advantages__item {
@@ -197,8 +197,14 @@
   }
 
   .advantages__item--short {
+    position: static;
+
     width: 256px;
     padding: 45px 54px 44px;
+
+    &:not(:last-child)::after {
+      display: none;
+    }
   }
 
   .advantages__item-wrapper {
