@@ -53,3 +53,23 @@
 
   transform: translateX(-50%);
 }
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    position: static;
+
+    padding-bottom: 0;
+  }
+
+  .page-header__main-nav {
+    display: block;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+
+  .page-header__logo {
+    top: 0;
+  }
+}

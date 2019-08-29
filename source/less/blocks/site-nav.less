@@ -4,8 +4,7 @@
   padding: 0;
 
   list-style: none;
-
-  background-color: @color-background-contrast;
+  background-color: @color-contrast;
 
   &::after {
     content: "";
@@ -47,14 +46,95 @@
   font-weight: bold;
   color: @color-text-light;
 
-  background-color: @color-background-contrast;
+  background-color: @color-contrast;
 
-  &:hover {
-    background-color: @color-background-contrast-hover;
+  &:hover,
+  &:focus {
+    background-color: @color-contrast-hover;
   }
 
   &:active {
     color: @color-text-light-active;
-    background-color: @color-background-contrast-active;
+    background-color: @color-contrast-active;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .site-nav {
+    position: static;
+
+    display: flex;
+
+    background-color: transparent;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .site-nav__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .site-nav__item {
+    box-shadow: none;
+  }
+
+  .site-nav__item:first-child {
+    box-shadow: none;
+  }
+
+  .site-nav__item:last-child {
+    box-shadow: none;
+  }
+
+  .site-nav__item:nth-child(2) {
+    margin-right: auto;
+  }
+
+  .site-nav__link {
+    display: block;
+    box-sizing: border-box;
+    min-width: 153px;
+    padding: 14px 20px 16px;
+
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold;
+    color: @color-text-dark-heading;
+
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: @color-contrast;
+
+      background-color: transparent;
+    }
+
+    &:active {
+      color: @color-text-dark-active;
+
+      background-color: transparent;
+    }
+
+    &--active {
+      color: #766357;
+    }
+
+    &--current:hover,
+    &--current:focus {
+      color: #604e43;
+    }
+
+    &--current:active {
+      color: rgba(118, 99, 87, 0.3);
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-nav__link {
+    min-width: 239px;
   }
 }
