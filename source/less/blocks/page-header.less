@@ -2,7 +2,7 @@
   position: relative;
 }
 
-.page-header__logo {
+.page-header__logo-link {
   position: absolute;
   z-index: 1;
   left: 50%;
@@ -11,8 +11,12 @@
   transform: translateX(-50%);
 }
 
+.page-header__logo-image {
+  display: block;
+}
+
 @media (min-width: @tablet-width) {
-  .page-header__logo {
+  .page-header__logo-link {
     top: 0;
   }
 }
