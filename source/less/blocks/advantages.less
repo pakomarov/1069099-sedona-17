@@ -11,7 +11,7 @@
 
   margin: 0;
   padding: 0;
-  padding-top: 37px;
+  padding-top: 39px;
 
   list-style: none;
 
@@ -23,12 +23,13 @@
     left: 50%;
 
     width: 100%;
-    height: 37px;
+    height: 39px;
 
     background-color: @color-contrast;
     background-image: url("../img/bg-triangle.svg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    background-position: top;
     transform: translateX(-50%);
   }
 }
@@ -70,7 +71,7 @@
 }
 
 .advantages__item--verbose .advantages__item-title {
-  padding: 40px 27px 0;
+  padding: 39px 27px 0;
 
   color: @color-text-light-heading;
 }
@@ -95,10 +96,14 @@
 }
 
 .advantages__item--verbose .advantages__item-description {
-  margin-bottom: 40px;
-  padding: 0 29px;
+  margin-bottom: 39px;
+  padding: 0 28px;
 
   color: @color-text-light;
+}
+
+.advantages__item--bridge br {
+  display: none;
 }
 
 .advantages__item-frame {
@@ -179,6 +184,16 @@
 
 .advantages__extra-item-description {
   margin: 0;
+
+  line-height: 21px;
+}
+
+.advantages__extra-item--gifts br {
+  display: none;
+}
+
+.advantages__extra-item--food br {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -248,6 +263,15 @@
     padding-bottom: 20px;
   }
 
+  .advantages__item--bridge br {
+    display: inline;
+  }
+
+  .advantages__item--size {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
   .advantages__item-frame {
     width: 512px;
     height: 256px;
@@ -273,7 +297,7 @@
 
     width: 256px;
     margin: 0;
-    padding: 159px 45px 61px;
+    padding: 159px 46px 61px;
 
     text-align: center;
 
@@ -307,6 +331,10 @@
 
   .advantages__extra-item-title {
     margin-bottom: 21px;
+  }
+
+  .advantages__extra-item--food br {
+    display: inline;
   }
 }
 
@@ -343,6 +371,20 @@
     padding: 0 60px;
   }
 
+  .advantages__item--bridge br {
+    display: none;
+  }
+
+  .advantages__item--bridge .advantages__item-description {
+    padding-left: 85px;
+    padding-right: 85px;
+  }
+
+  .advantages__item--size {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
   .advantages__item-frame {
     width: 800px;
     height: 256px;
@@ -351,5 +393,9 @@
   .advantages__extra-item {
     width: 400px;
     padding-bottom: 82px;
+  }
+
+  .advantages__extra-item--gifts br {
+    display: inline;
   }
 }
