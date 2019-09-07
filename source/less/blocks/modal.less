@@ -1,0 +1,16 @@
+.modal {
+  box-sizing: border-box;
+  width: @mobile-width;
+  margin: 0 auto;
+
+  background-color: @color-base;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+@media (min-width: @tablet-width) {
+  .modal {
+    &--warning {
+      width: 400px;
+    }
+  }
+}
