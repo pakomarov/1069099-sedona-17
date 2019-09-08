@@ -53,7 +53,7 @@
         <h1 class="page-main__heading text-heading text-heading--large">Оставьте свой отзыв</h1>
         <p class="page-main__sub-heading">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
 
-        <section class="form">
+        <section class="form page-main__form">
           <h2 class="visually-hidden">Форма отправки отзыва</h2>
           <form class="form__container" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="form__fieldset">
@@ -78,7 +78,7 @@
               <ul class="contacts">
                 <li class="contacts__item">
                   <label class="contacts__label form__text-secondary" for="contacts-phone">Контактный телефон*:</label>
-                  <input class="contacts__input form__text-main" id="contacts-phone" type="tel" name="phone" placeholder="Введите телефон">
+                  <input class="contacts__input form__text-main" id="contacts-phone" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон">
                 </li>
                 <li class="contacts__item">
                   <label class="contacts__label form__text-secondary" for="contacts-email">Электронная почта*:</label>
