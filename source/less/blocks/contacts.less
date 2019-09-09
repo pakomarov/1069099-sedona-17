@@ -1,0 +1,36 @@
+.contacts {
+  margin: 0;
+  padding: 20px 20px 15px;
+
+  list-style: none;
+}
+
+.contacts__item {
+  margin-bottom: 13px;
+}
+
+.contacts__label {
+  display: block;
+  padding: 0 22px;
+  margin-bottom: 6px;
+}
+
+.contacts__input {
+  position: relative;
+
+  padding: 17px 71px 15px 22px;
+
+  background-color: @color-background;
+
+  &--phone {
+    background: url("../img/icon-phone.svg") right 19px top 20px no-repeat,
+      linear-gradient(to left, #e6e6e6 58px, @color-background 58px);
+  }
+
+  &--mail {
+    background: url("../img/icon-mail.svg") right 21px top 21px no-repeat,
+      linear-gradient(to left, #e6e6e6 58px, @color-background 58px);
+  }
+
+  border: none;
+}
