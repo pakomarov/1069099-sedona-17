@@ -1,0 +1,34 @@
+.comment__heading {
+  margin-bottom: 16px;
+}
+
+.comment__input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 160px;
+  padding: 17px 22px 15px;
+
+  background-color: @color-background;
+
+  border: none;
+  resize: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: #e5e5e5;
+  }
+
+  &:active,
+  &:focus-within {
+    background-color: @color-base;
+    box-shadow: inset 0 0 0 4px #e5e5e5;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .comment__heading {
+    margin-bottom: 56px;
+  }
+}
