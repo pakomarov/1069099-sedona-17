@@ -23,6 +23,8 @@
 .contacts__input {
   position: relative;
 
+  box-sizing: border-box;
+  width: 100%;
   padding: 17px 71px 15px 22px;
 
   &--phone {
@@ -68,5 +70,43 @@
   .contacts__input {
     box-sizing: border-box;
     width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__heading {
+    margin-bottom: 74px;
+  }
+
+  .contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -24px;
+  }
+
+  .contacts__item {
+    display: flex;
+    align-items: center;
+    width: 480px;
+    margin-top: 24px;
+  }
+
+  .contacts__item:nth-child(2n) {
+    justify-content: space-between;
+  }
+
+  .contacts__label {
+    margin: 0;
+    margin-right: 16px;
+    padding: 0;
+  }
+
+  .contacts__label-wrapper {
+    display: none;
+  }
+
+  .contacts__input {
+    box-sizing: border-box;
+    width: 315px;
   }
 }

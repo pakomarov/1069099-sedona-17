@@ -77,8 +77,8 @@
               <legend class="contacts__heading form__fieldset-heading  text-heading">Контактная информация:</legend>
               <ul class="contacts__list">
                 <li class="contacts__item">
-                  <label class="contacts__label form__text-secondary" for="contacts-phone">Контактный телефон*:</label>
-                  <input class="contacts__input contacts__input--phone form__text-main" id="contacts-phone" type="tel" name="phone" placeholder="Введите телефон">
+                  <label class="contacts__label form__text-secondary" for="contacts-phone"><span class="contacts__label-wrapper">Контактный&#32;</span> телефон*:</label>
+                  <input class="contacts__input contacts__input--phone form__text-main" id="contacts-phone" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон">
                 </li>
                 <li class="contacts__item">
                   <label class="contacts__label form__text-secondary" for="contacts-mail">Электронная почта*:</label>
@@ -126,7 +126,6 @@
             </fieldset>
             <fieldset class="comment form__comment form__fieldset form__fieldset--row">
               <legend class="comment__heading form__fieldset-heading text-heading">Опишите свои эмоции:</legend>
-              <label class="visually-hidden" for="comment-text">Ваши впечатления:</label>
               <textarea class="comment__input form__text-main" id="comment-text" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
             <button class="form__submit button" type="submit">Отправить отзыв</button>

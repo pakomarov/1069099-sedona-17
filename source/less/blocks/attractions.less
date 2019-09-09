@@ -96,3 +96,34 @@
     }
   }
 }
+
+@media (min-width: @desktop-width) {
+  .attractions__list {
+    padding-left: 0;
+  }
+
+  .attractions__item {
+    width: 210px;
+
+    &:nth-child(2n + 1) {
+      margin-right: 0;
+    }
+
+    &:nth-child(1) {
+      margin-right: 49px;
+    }
+
+    &:nth-child(2) {
+      margin-right: 48px;
+    }
+
+    &:nth-child(3) {
+      margin-right: auto;
+    }
+  }
+
+  .attractions__label {
+    padding-right: 0;
+    padding-left: 81px;
+  }
+}

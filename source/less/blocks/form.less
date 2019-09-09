@@ -58,7 +58,11 @@
 }
 
 .form__fieldset-heading {
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 20px;
+
+  text-align: center;
 }
 
 .form__comment {
@@ -76,10 +80,6 @@
     box-sizing: border-box;
     width: 648px;
     margin: 0 auto;
-  }
-
-  .form__impression {
-    order: -1;
   }
 
   .form__fieldset {
@@ -128,10 +128,14 @@
   }
 
   .form__fieldset--column-left .form__fieldset-heading {
+    margin-left: 0;
+    margin-right: 0;
     text-align: left;
   }
 
   .form__fieldset--column-right .form__fieldset-heading {
+    margin-left: 0;
+    margin-right: 0;
     text-align: left;
   }
 
@@ -148,6 +152,7 @@
   }
 
   .form__impression {
+    order: -1;
     margin-bottom: 71px;
   }
 
@@ -174,5 +179,44 @@
     align-self: center;
 
     text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__container {
+    width: 960px;
+  }
+
+  .form__fieldset {
+    &--row {
+      width: 960px;
+    }
+
+    &--column-left {
+      width: 480px;
+      padding-left: 4px;
+      padding-right: 40px;
+    }
+
+    &--column-right {
+      width: 480px;
+      padding-left: 78px;
+    }
+  }
+
+  .form__full-name {
+    margin-bottom: 68px;
+  }
+
+  .form__contacts {
+    margin-bottom: 54px;
+  }
+
+  .form__impression {
+    margin-bottom: 68px;
+  }
+
+  .form__attractions {
+    margin-bottom: 66px;
   }
 }
