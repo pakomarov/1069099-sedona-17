@@ -1,0 +1,45 @@
+.call-to-action__heading {
+  max-width: 260px;
+  margin: 0 auto;
+  padding: 10px;
+
+  font-size: 21px;
+}
+
+.call-to-action__text {
+  max-width: 280px;
+  margin: 0 auto 26px;
+  padding: 8px 10px;
+}
+
+.call-to-action__text br {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .call-to-action__heading {
+    max-width: 440px;
+    margin-bottom: 12px;
+
+    font-size: 30px;
+  }
+
+  .call-to-action__text {
+    max-width: 440px;
+    margin-bottom: 33px;
+  }
+
+  .call-to-action__text br {
+    display: inline;
+  }
+
+  .call-to-action__button {
+    width: 458px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .call-to-action__text {
+    margin-bottom: 38px;
+  }
+}

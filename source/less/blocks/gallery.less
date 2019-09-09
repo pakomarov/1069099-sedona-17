@@ -11,8 +11,6 @@
   display: block;
   padding: 23px 20px 17px;
 
-  text-align: left;
-
   &::before {
     content: "";
 
@@ -51,20 +49,16 @@
   margin: 0;
 
   font-size: 14px;
-  font-weight: bold;
   line-height: 24px;
-  color: @color-text-dark-heading;
+  text-align: left;
 }
 
 .gallery__item-author {
   margin: 0;
   margin-bottom: 8px;
 
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 24px;
+  text-align: left;
   text-transform: none;
-  color: @color-text-dark;
 }
 
 .gallery__item-likes {
@@ -74,10 +68,8 @@
   margin: 0;
 
   font-size: 14px;
-  font-weight: bold;
   line-height: 24px;
   text-align: left;
-  color: @color-text-dark-heading;
 
   &::before {
     content: "";
@@ -113,6 +105,10 @@
     padding: 0;
 
     background-color: @color-background;
+
+    &:nth-child(2n+3) {
+      background-color: #eaeaea;
+    }
 
     &::before {
       display: none;

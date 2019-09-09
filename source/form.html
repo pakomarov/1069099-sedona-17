@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="/fonts/ptsans.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="/fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
     <script>
       // Picture element HTML5 shiv
@@ -50,6 +50,88 @@
         <div class="page-main__wellcome">
           <img class="page-main__wellcome-image" src="img/text-sedona.svg" width="229" height="39" alt="Sedona">
         </div>
+        <h1 class="page-main__heading text-heading text-heading--large">Оставьте свой отзыв</h1>
+        <p class="page-main__sub-heading">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+
+        <section class="form page-main__form">
+          <h2 class="visually-hidden">Форма отправки отзыва</h2>
+          <form class="form__container" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="full-name form__full-name form__fieldset form__fieldset--column-right">
+              <legend class="full-name__heading form__fieldset-heading text-heading">Представьтесь:</legend>
+              <ul class="full-name__list">
+                <li class="full-name__item">
+                  <label class="full-name__label form__text-secondary" for="full-name-first-name">Имя*:</label>
+                  <input class="full-name__input full-name__input--first-name form__text-main" id="full-name-first-name" type="text" name="first-name" placeholder="Петр">
+                </li>
+                <li class="full-name__item">
+                  <label class="full-name__label form__text-secondary" for="full-name-last-name">Фамилия*:</label>
+                  <input class="full-name__input full-name__input--last-name form__text-main" id="full-name-last-name" type="text" name="last-name" placeholder="Иванов">
+                </li>
+                <li class="full-name__item">
+                  <label class="full-name__label form__text-secondary" for="full-name-patronymic">Отчество:</label>
+                  <input class="full-name__input full-name__input--patronymic form__text-main" id="full-name-patronymic" type="text" name="patronymic" placeholder="Александрович">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="contacts form__contacts form__fieldset form__fieldset--row">
+              <legend class="contacts__heading form__fieldset-heading  text-heading">Контактная информация:</legend>
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <label class="contacts__label form__text-secondary" for="contacts-phone"><span class="contacts__label-wrapper">Контактный&#32;</span> телефон*:</label>
+                  <input class="contacts__input contacts__input--phone form__text-main" id="contacts-phone" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон">
+                </li>
+                <li class="contacts__item">
+                  <label class="contacts__label form__text-secondary" for="contacts-mail">Электронная почта*:</label>
+                  <input class="contacts__input contacts__input--mail form__text-main" id="contacts-mail" type="email" name="mail" placeholder="Введите e-mail">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="impression form__impression form__fieldset form__fieldset--column-left">
+              <legend class="impression__heading form__fieldset-heading text-heading">Ваше общее впечатление:</legend>
+              <ul class="impression__list">
+                <li class="impression__item">
+                  <input class="impression__input visually-hidden" id="impression-good" type="radio" name="impression" value="good" checked>
+                  <label class="impression__label form__text-main" for="impression-good">Скорее положительное</label>
+                </li>
+                <li class="impression__item">
+                  <input class="impression__input visually-hidden" id="impression-bad" type="radio" name="impression" value="bad">
+                  <label class="impression__label form__text-main" for="impression-bad">Скорее отрицательное</label>
+                </li>
+                <li class="impression__item">
+                  <input class="impression__input visually-hidden" id="impression-none" type="radio" name="impression" value="none">
+                  <label class="impression__label form__text-main" for="impression-none">Затрудняюсь ответить</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="attractions form__attractions form__fieldset form__fieldset--row">
+              <legend class="attractions__heading form__fieldset-heading text-heading">Посещенные достопримечательности:</legend>
+              <ul class="attractions__list">
+                <li class="attractions__item">
+                  <input class="attractions__input visually-hidden" id="attractions-devil-bridge" type="checkbox" name="devil-bridge" checked>
+                  <label class="attractions__label form__text-main" for="attractions-devil-bridge">Мост Дьявола</label>
+                </li>
+                <li class="attractions__item">
+                  <input class="attractions__input visually-hidden" id="attractions-bell-mountain" type="checkbox" name="bell-mountain" checked>
+                  <label class="attractions__label form__text-main" for="attractions-bell-mountain">Гора-Колокол</label>
+                </li>
+                <li class="attractions__item">
+                  <input class="attractions__input visually-hidden" id="attractions-slide-park" type="checkbox" name="slide-park" checked>
+                  <label class="attractions__label form__text-main" for="attractions-slide-park">Слайд-парк</label>
+                </li>
+                <li class="attractions__item">
+                  <input class="attractions__input visually-hidden" id="attractions-red-rocks" type="checkbox" name="red-rocks">
+                  <label class="attractions__label form__text-main" for="attractions-red-rocks">Красные скалы</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="comment form__comment form__fieldset form__fieldset--row">
+              <legend class="comment__heading form__fieldset-heading text-heading">Опишите свои эмоции:</legend>
+              <textarea class="comment__input form__text-main" id="comment-text" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
+            </fieldset>
+            <button class="form__submit button" type="submit">Отправить отзыв</button>
+            <p class="form__footnote form__text-secondary">* — обязательные поля</p>
+          </form>
+        </section>
       </main>
 
       <footer class="page-footer">
@@ -82,6 +164,23 @@
         </p>
       </footer>
     </div>
+
+    <section class="warning modal modal--warning">
+      <h2 class="warning__heading text-heading text-heading--large">Что-то пошло не&nbsp;так!</h2>
+      <p class="warning__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="warning__button button" type="button">Ок</button>
+    </section>
+
+    <section class="success modal modal--success">
+      <div class="success__top">
+        <h2 class="success__heading text-heading text-heading--large">Ваш отзыв отправлен!</h2>
+        <p class="success__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>В ближайшее время мы опубликуем его на сайте.</p>
+      </div>
+      <div class="success__bottom">
+        <button class="success__button button" type="button">Закрыть окно</button>
+      </div>
+    </section>
+
     <script src="js/script.min.js"></script>
   </body>
 </html>
