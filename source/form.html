@@ -56,9 +56,9 @@
         <section class="form page-main__form">
           <h2 class="visually-hidden">Форма отправки отзыва</h2>
           <form class="form__container" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="form__fieldset form__fieldset--order-2 form__fieldset--column form__fieldset--column-right">
-              <legend class="form__fieldset-heading text-heading">Представьтесь:</legend>
-              <ul class="full-name">
+            <fieldset class="full-name form__full-name form__fieldset">
+              <legend class="full-name__heading form__fieldset-heading text-heading">Представьтесь:</legend>
+              <ul class="full-name__list">
                 <li class="full-name__item">
                   <label class="full-name__label form__text-secondary" for="full-name-first-name">Имя*:</label>
                   <input class="full-name__input full-name__input--first-name form__text-main" id="full-name-first-name" type="text" name="first-name" placeholder="Петр">
@@ -73,9 +73,9 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__fieldset form__fieldset--order-3 form__fieldset--row">
-              <legend class="form__fieldset-heading  text-heading">Контактная информация:</legend>
-              <ul class="contacts">
+            <fieldset class="contacts form__contacts form__fieldset">
+              <legend class="contacts__heading form__fieldset-heading  text-heading">Контактная информация:</legend>
+              <ul class="contacts__list">
                 <li class="contacts__item">
                   <label class="contacts__label form__text-secondary" for="contacts-phone">Контактный телефон*:</label>
                   <input class="contacts__input contacts__input--phone form__text-main" id="contacts-phone" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон">
@@ -86,9 +86,9 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__fieldset form__fieldset--order-1 form__fieldset--column form__fieldset--column-left">
-              <legend class="form__fieldset-heading text-heading">Ваше общее впечатление:</legend>
-              <ul class="impression">
+            <fieldset class="impression form__impression form__fieldset">
+              <legend class="impression__heading form__fieldset-heading text-heading">Ваше общее впечатление:</legend>
+              <ul class="impression__list">
                 <li class="impression__item">
                   <input class="impression__input visually-hidden" id="impression-good" type="radio" name="impression" value="good" checked>
                   <label class="impression__label form__text-main" for="impression-good">Скорее положительное</label>
@@ -103,9 +103,9 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__fieldset form__fieldset--order-4 form__fieldset--row">
-              <legend class="form__fieldset-heading text-heading">Посещенные достопримечательности:</legend>
-              <ul class="attractions">
+            <fieldset class="attractions form__attractions form__fieldset">
+              <legend class="attractions__heading form__fieldset-heading text-heading">Посещенные достопримечательности:</legend>
+              <ul class="attractions__list">
                 <li class="attractions__item">
                   <input class="attractions__input visually-hidden" id="attractions-devil-bridge" type="checkbox" name="devil-bridge" checked>
                   <label class="attractions__label form__text-main" for="attractions-devil-bridge">Мост Дьявола</label>
@@ -124,10 +124,10 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__fieldset form__fieldset--order-5 form__fieldset--row">
-              <legend class="form__fieldset-heading text-heading">Опишите свои эмоции:</legend>
+            <fieldset class="comment form__comment form__fieldset">
+              <legend class="comment__heading form__fieldset-heading text-heading">Опишите свои эмоции:</legend>
               <label class="visually-hidden" for="emotions-text">Ваши впечатления:</label>
-              <textarea class="form__emotions form__text-main" id="emotions-text" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
+              <textarea class="comment__input form__text-main" id="emotions-text" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
             <button class="form__submit button" type="submit">Отправить отзыв</button>
             <p class="form__footnote form__text-secondary">* — обязательные поля</p>
