@@ -68,3 +68,111 @@
 .form__footnote {
   display: none;
 }
+
+@media (min-width: @tablet-width) {
+  .form__container {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 648px;
+    margin: 0 auto;
+  }
+
+  .form__impression {
+    order: -1;
+  }
+
+  .form__fieldset {
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+
+    &::before {
+      display: none;
+    }
+
+    &--row {
+      width: 648px;
+
+      border-top: 1px solid @color-background;
+    }
+
+    &--column-left {
+      position: relative;
+
+      width: 324px;
+      padding-right: 20px;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        bottom: 0;
+        right: 1px;
+
+        width: 1px;
+        height: calc(100% - 4px);
+
+        background-color: @color-background;
+      }
+    }
+
+    &--column-right {
+      width: 324px;
+      padding-left: 57px;
+    }
+  }
+
+  .form__fieldset-heading {
+    padding-top: 0;
+  }
+
+  .form__fieldset--column-left .form__fieldset-heading {
+    text-align: left;
+  }
+
+  .form__fieldset--column-right .form__fieldset-heading {
+    text-align: left;
+  }
+
+  .form__fieldset--row .form__fieldset-heading {
+    width: 400px;
+  }
+
+  .form__full-name {
+    margin-bottom: 71px;
+  }
+
+  .form__contacts {
+    margin-bottom: 54px;
+  }
+
+  .form__impression {
+    margin-bottom: 71px;
+  }
+
+  .form__attractions {
+    margin-bottom: 68px;
+  }
+
+  .form__comment {
+    margin-bottom: 58px;
+  }
+
+  .form__submit {
+    width: 50%;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .form__footnote {
+    display: block;
+    max-width: 300px;
+    margin: 0;
+    padding: 0;
+    padding-top: 3px;
+    align-self: center;
+
+    text-align: right;
+  }
+}

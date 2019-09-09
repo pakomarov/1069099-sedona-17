@@ -56,7 +56,7 @@
         <section class="form page-main__form">
           <h2 class="visually-hidden">Форма отправки отзыва</h2>
           <form class="form__container" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="full-name form__full-name form__fieldset">
+            <fieldset class="full-name form__full-name form__fieldset form__fieldset--column-right">
               <legend class="full-name__heading form__fieldset-heading text-heading">Представьтесь:</legend>
               <ul class="full-name__list">
                 <li class="full-name__item">
@@ -73,12 +73,12 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="contacts form__contacts form__fieldset">
+            <fieldset class="contacts form__contacts form__fieldset form__fieldset--row">
               <legend class="contacts__heading form__fieldset-heading  text-heading">Контактная информация:</legend>
               <ul class="contacts__list">
                 <li class="contacts__item">
                   <label class="contacts__label form__text-secondary" for="contacts-phone">Контактный телефон*:</label>
-                  <input class="contacts__input contacts__input--phone form__text-main" id="contacts-phone" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Введите телефон">
+                  <input class="contacts__input contacts__input--phone form__text-main" id="contacts-phone" type="tel" name="phone" placeholder="Введите телефон">
                 </li>
                 <li class="contacts__item">
                   <label class="contacts__label form__text-secondary" for="contacts-mail">Электронная почта*:</label>
@@ -86,7 +86,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="impression form__impression form__fieldset">
+            <fieldset class="impression form__impression form__fieldset form__fieldset--column-left">
               <legend class="impression__heading form__fieldset-heading text-heading">Ваше общее впечатление:</legend>
               <ul class="impression__list">
                 <li class="impression__item">
@@ -103,7 +103,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="attractions form__attractions form__fieldset">
+            <fieldset class="attractions form__attractions form__fieldset form__fieldset--row">
               <legend class="attractions__heading form__fieldset-heading text-heading">Посещенные достопримечательности:</legend>
               <ul class="attractions__list">
                 <li class="attractions__item">
@@ -124,10 +124,10 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="comment form__comment form__fieldset">
+            <fieldset class="comment form__comment form__fieldset form__fieldset--row">
               <legend class="comment__heading form__fieldset-heading text-heading">Опишите свои эмоции:</legend>
-              <label class="visually-hidden" for="emotions-text">Ваши впечатления:</label>
-              <textarea class="comment__input form__text-main" id="emotions-text" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
+              <label class="visually-hidden" for="comment-text">Ваши впечатления:</label>
+              <textarea class="comment__input form__text-main" id="comment-text" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
             <button class="form__submit button" type="submit">Отправить отзыв</button>
             <p class="form__footnote form__text-secondary">* — обязательные поля</p>
