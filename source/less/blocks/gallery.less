@@ -62,30 +62,40 @@
 }
 
 .gallery__item-likes {
-  position: relative;
+  text-align: left;
+}
 
-  padding-left: 37px;
+.gallery__item-like-button {
+  width: 23px;
+  height: 23px;
   margin: 0;
+  margin-right: 10px;
+  padding: 0;
 
+  overflow: hidden;
+  text-indent: -10000px;
+
+  background-color: transparent;
+  border: none;
+
+  background-image: url("../img/icon-like-black.svg");
+  background-repeat: no-repeat;
+  opacity: 0.3;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.gallery__item-like-count {
   font-size: 14px;
   line-height: 24px;
   text-align: left;
-
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.3;
-
-    width: 23px;
-    height: 21px;
-
-    background-image: url("../img/icon-like-black.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -133,14 +143,14 @@
     height: 400px;
   }
 
-  .gallery__item-description {
+  .gallery__item-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px 17px;
   }
 
-  .gallery__item-wrapper {
+  .gallery__item-description {
     width: 200px;
   }
 
@@ -149,10 +159,17 @@
   }
 
   .gallery__item-likes {
-    box-sizing: border-box;
-    min-width: 65px;
-    max-width: 200px;
-    padding-left: 33px;
+    text-align: right;
+  }
+
+  .gallery__item-like-button {
+    margin-right: 5px;
+  }
+
+  .gallery__item-like-count {
+    display: inline-block;
+    min-width: 32px;
+    padding-top: 1px;
   }
 }
 
@@ -182,7 +199,7 @@
     height: 400px;
   }
 
-  .gallery__item-description {
+  .gallery__item-info {
     position: absolute;
     bottom: 0;
 
@@ -200,13 +217,21 @@
     color: #ffffff;
   }
 
-  .gallery__item-likes {
+  .gallery__item-like-button {
+    background-image: url("../img/icon-like-white.svg");
+    opacity: 1;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+  }
+
+  .gallery__item-like-count {
     color: #ffffff;
-
-    &::before {
-      opacity: 1;
-
-      background-image: url("../img/icon-like-white.svg");
-    }
   }
 }
