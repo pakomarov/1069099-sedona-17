@@ -1,17 +1,27 @@
 .modal {
+  position: fixed;
+  z-index: 101;
+  left: 50%;
+  transform: translateX(-50%);
+
   box-sizing: border-box;
   width: @mobile-width;
-  margin: 0 auto;
 
   background-color: @color-base;
   box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
 
   &--warning {
-    display: none;
+    bottom: 718px;
   }
 
   &--success {
-    display: none;
+    bottom: 348px;
+  }
+
+  display: none;
+
+  &--show {
+    display: block;
   }
 }
 
